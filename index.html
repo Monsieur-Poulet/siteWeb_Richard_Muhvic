@@ -7,36 +7,49 @@
     <title>Richard Muhvic</title>
     <link rel="stylesheet" href="styles.css">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.typekit.net/qpy1ofg.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
+<script type="text/javascript" src="main.js"></script>
 
 
 
 </head>
 <body>
-    <section class="page_1">
+    <section class="page_1" id="accueil">
         <header>
             <nav>
                 <ul>
-                    <li><a href="">Accueil</a></li>
-                    <li><a href="">Description</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#description">Description</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
+
+        <div class="rs">
+            <a href="https://vimeo.com/richardmuhvic"><i class="fab fa-vimeo"></i></a>
+            <a href="https://github.com/RichardMuhvic"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.instagram.com/studiooorichard/"><i class="fab fa-instagram-square"></i></a>
+            <a href="www.linkedin.com/in/richardmuhvic"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:richardmuhvic@gmail.com"><i class="fab fa-google"></i></a>
+        </div>
+        
         <section class="title">
-            <h1>Richard Muhvic</h1>
-            <h2>Développeur web</h2>
+            <a href="mailto:richardmuhvic@gmail.com">
+                <h1>Richard Muhvic</h1>
+                <h2>Développeur web</h2>
+            </a>
         </section>
     </section>
 
-    <section class="page_2">
+    <section class="page_2" id="description">
         <div class="sous_page_2">
             <p>Mon principal domaine d'intérêt est le front-end. J’ai commencé avec le langage <strong>HTML, CSS3 et Javascript.</strong><br><br>
 
@@ -50,16 +63,16 @@
             
             <strong>Alors n’hésitez pas à me contacter.</strong></p>
             <div class="btn">
-                <button>Contactez-moi</button>
+                <button><a href="mailto:richardmuhvic@gmail.com">Contactez-moi</a></button>
             </div>
         </div>
     </section>
 
-    <section class="page_3">
+    <section class="page_3" id="portfolio">
         <div class="sous_page_3">
             <div class="card_1">
                 <div class="image">
-                    <img src="" alt="">
+                    <img src="images/hébergement_cover.png" alt="">
                 </div>
                 <div class="banner">
                     <h2><a href="">Site d'hébergement</a></h2>
@@ -68,7 +81,7 @@
 
             <div class="card_1">
                 <div class="image">
-                    <img src="" alt="">
+                    <img src="images/restaurant_cover.png" alt="">
                 </div>
                 <div class="banner">
                     <h2><a href="">Site de restauration</a></h2>
@@ -77,7 +90,7 @@
 
             <div class="card_1">
                 <div class="image">
-                    <img src="" alt="">
+                    <img src="images/graphisme_cover.png" alt="">
                 </div>
                 <div class="banner">
                     <h2><a href="">graphisme</a></h2>
@@ -86,7 +99,7 @@
 
             <div class="card_1">
                 <div class="image">
-                    <img src="" alt="">
+                    <img src="images/work-motion_design.jpg.png" alt="">
                 </div>
                 <div class="banner">
                     <h2><a href="">motion design</a></h2>
@@ -95,38 +108,40 @@
         </div> 
     </section>
 
-    <section class="page_4">
+    <section class="page_4" id="contact">
         <div class="sous_page_4">
             <div class="paragraphe">
                 <h1>Faisons quelque chose de grand !</h1>
                 <p>Si vous voulez entrer en contact, me parler d'un projet de collaboration ou simplement dire 'Bonjour',<br>
                     remplissez ce formulaire ci-dessous ou envoyez un e-mail en cliquant sur mon adresse mail :<br>
                 </p>
-                <a href=""><strong>richardmuhvic@gmail.com</strong></a>
+                <a href="mailto:richardmuhvic@gmail.com"><strong>richardmuhvic@gmail.com</strong></a>
             </div>
 
             <div class="card_2">
-                <a class="sous_card_2" href="">
+                <a class="sous_card_2" href="mailto:richardmuhvic@gmail.com">
                     <h2>richardmuhvic@gmail.com</h2>
                 </a>
-                <a class="sous_card_2" href="">
+                <a class="sous_card_2" href="mailto:richardmuhvic@gmail.com">
                     <h2>06 95 41 93 37</h2>
                 </a>
-                <a class="sous_card_2" href="">
+                <a class="sous_card_2" href="mailto:richardmuhvic@gmail.com">
                     <h2>Freelance disponible</h2>
                 </a>
-                <a class="sous_card_2" href="">
+                <a class="sous_card_2" href="mailto:richardmuhvic@gmail.com">
                     <h2>France, Lille</h2>
                 </a>
             </div>
         </div>
     </section>
     <footer>
-        <a href=""><i class="fab fa-vimeo"></i></a>
-        <a href=""><i class="fab fa-github-square"></i></a>
-        <a href=""><i class="fab fa-instagram-square"></i></a>
-        <a href=""><i class="fab fa-linkedin"></i></a>
-        <a href=""><i class="fab fa-google"></i></a>
+        <div class="icon">
+            <a href="https://vimeo.com/richardmuhvic"><i class="fab fa-vimeo"></i></a>
+            <a href="https://github.com/RichardMuhvic"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.instagram.com/studiooorichard/"><i class="fab fa-instagram-square"></i></a>
+            <a href="www.linkedin.com/in/richardmuhvic"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:richardmuhvic@gmail.com"><i class="fab fa-google"></i></a>
+        </div>
     </footer>
 </body>
 </html>

@@ -15,7 +15,9 @@ font-style: italic;*/
 
 
 body{
+    margin: 0;
     background-color: #282828;
+    width: 100%;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
 }
@@ -33,25 +35,65 @@ h1{
     font-size: 8em;
     margin: -10px;
 }
-header h2{
+h2{
     font-size: 1.8em;
     letter-spacing: 0.5em;
 }
 .page_1{
     min-height: 100vh;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.title{
+.title{;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 38%;
-    left: 31.5%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    animation-name: boucle;
+    animation-iteration-count: infinite;
+    animation-duration: 4200ms;
+    animation-timing-function: cubic-bezier(0.6, 0.01, 0.4, 1);
+    /*transition: transform .8s;
+    transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);*/
+}
+@keyframes boucle {
+    0%{
+    transform: scale(1);
+    }
+    50%{
+    transform: scale(1.08);
+    }
+    100%{
+    transform: scale(1);
+    }
+}
+
+.title:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.title a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title h1, .title h2{
+    color: #31afb4;
 }
 nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    background: #282828;
 }
 nav ul{
     display: flex;
@@ -60,18 +102,53 @@ nav ul{
 }
 nav ul li{
     list-style: none;
+    transition: transform 0.3s;
+    transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
 }
+nav ul li:hover{
+    transform:  scale(1.2);
+}
+
 nav ul li a{
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 0.8em;
     text-decoration: none;
+    transition: transform .2s;
+    transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
+
 }
 /*---HEADER---*/
 header{
-
+    display: flex;
+    justify-content: center;
+    top: 0;
+    position: absolute;
+    background: #282828;
+    width: 100%;
 }
-
+.rs{
+    position: absolute;
+    left: 40px;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+}
+.rs a{
+    text-decoration: none;
+    transition: transform .2s;
+    transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
+}
+.rs a:hover{
+    transform: scale(1.2);
+}
+.rs i{
+    font-size: 1.5em;
+    color: white;
+}
 /*---SECTION 2---*/
 .page_2{
     display: flex;
@@ -100,9 +177,15 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 7px black;
-
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    transition: transform .5s;
+    transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
 }
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 button{
     font-family: tandelle,sans-serif;
     font-weight: 700;
@@ -116,9 +199,17 @@ button{
     -webkit-background-clip:text;
     color:transparent;
     border: none;
-
 }
-
+button:hover{
+    cursor: pointer;
+}
+button a{
+    text-decoration: none;
+    background:-webkit-linear-gradient(bottom, #b1b1b1 10%, #e6e6e6 90%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
 /*---SECTION 3---*/
 .page_3{
     min-height: 100vh;
@@ -136,23 +227,37 @@ button{
     width: 90%;
 }
 .card_1{
+    position: relative;
+    z-index: 5;
     background: #31afb4;
     height: 300px;
     width: 40%;
     border-radius: 18px;
     margin: 30px 50px 30px 50px;
     position: relative;
-    box-shadow: 0px 0px 7px black;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    transition: transform .4s;
+    transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
+}
+.card_1:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
 .image{
-
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    object-fit: fill;
+    overflow: hidden;
+    border-radius: 18px;
 }
 .banner{
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    z-index: 2;
+    z-index: 15;
     bottom: 0;
     background: white;
     border-radius: 0 0 18px 18px;
@@ -168,7 +273,10 @@ button{
     color:transparent;
     font-size: 1.8em;
 }
-
+.banner h2{
+    font-size: 1.5em;
+    letter-spacing: 0;
+}
 /*---SECTION 4---*/
 .page_4{
     height: 100vh;
@@ -222,8 +330,13 @@ button{
     border-radius: 18px;
     margin: 20px;
     text-decoration: none;
-    box-shadow: 0px 0px 7px black;
-
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    transition: transform .4s;
+    transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
+}
+.sous_card_2:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
 .sous_card_2 h2{
     font-family: 'Montserrat', sans-serif;
@@ -232,4 +345,31 @@ button{
     font-size: 1em;
     color: #282828;
     text-transform: lowercase;
+}
+
+/*---FOOTER---*/
+footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+.icon a{
+    text-decoration: none;
+    transition: transform .2s;
+    transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
+}
+.icon a:hover{
+    transform: scale(1.2);
+}
+.icon i{
+    font-size: 2em;
+    color: white;
 }
