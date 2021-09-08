@@ -45,17 +45,17 @@ h2{
     justify-content: center;
     align-items: center;
 }
-.title{;
+.title{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 80%;
     animation-name: boucle;
     animation-iteration-count: infinite;
-    animation-duration: 4200ms;
+    animation-duration: 4500ms;
     animation-timing-function: cubic-bezier(0.6, 0.01, 0.4, 1);
     /*transition: transform .8s;
     transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);*/
@@ -65,7 +65,7 @@ h2{
     transform: scale(1);
     }
     50%{
-    transform: scale(1.08);
+    transform: scale(1.06);
     }
     100%{
     transform: scale(1);
@@ -85,6 +85,7 @@ h2{
 }
 .title h1, .title h2{
     color: #31afb4;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 nav{
     display: flex;
@@ -101,6 +102,7 @@ nav ul{
     width: 500px;
 }
 nav ul li{
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     list-style: none;
     transition: transform 0.3s;
     transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
@@ -113,11 +115,13 @@ nav ul li a{
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 0.8em;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     transition: transform .2s;
     transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
 
 }
+
 /*---HEADER---*/
 header{
     display: flex;
@@ -130,7 +134,7 @@ header{
 .rs{
     position: absolute;
     left: 40px;
-    top: 150px;
+    bottom: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -139,8 +143,9 @@ header{
 }
 .rs a{
     text-decoration: none;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     transition: transform .2s;
-    transition-timing-function: cubic-bezier(0.46, 0.01, 0.48, 1.01);
+    transition-timing-function: cubic-bezier(0.13, 0.32, 0.48, 1.01);
 }
 .rs a:hover{
     transform: scale(1.2);
@@ -148,6 +153,32 @@ header{
 .rs i{
     font-size: 1.5em;
     color: white;
+}
+
+.fa-vimeo{
+    background: #1ab7ea;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-github-square{
+    background: #f5f5f5;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-instagram-square{
+    background: linear-gradient(49.2deg,#f9ed32 10%,#ee2a7b 55%,#002aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-linkedin{
+    background: #0E76A8;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-google{
+    background: #E25E42;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /*---SECTION 2---*/
 .page_2{
@@ -340,11 +371,12 @@ button a{
 }
 .sous_card_2 h2{
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-size: 1em;
     color: #282828;
     text-transform: lowercase;
+    text-align: center;
 }
 
 /*---FOOTER---*/
@@ -370,6 +402,6 @@ footer{
     transform: scale(1.2);
 }
 .icon i{
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
 }
